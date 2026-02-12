@@ -62,10 +62,10 @@ export const Services: React.FC = () => {
       <div className="container mx-auto px-6">
         <Reveal>
           <div className="flex items-end justify-between mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-heading">
+            <h2 className="text-5xl md:text-6xl font-bold text-heading">
               Our <span className="text-primary">Expertise</span>
             </h2>
-            <div className="hidden md:block w-32 h-1 bg-gray-100 rounded-full">
+            <div className="hidden md:block w-32 h-1 bg-gray-100 rounded-full mb-2">
               <div className="w-1/3 h-full bg-primary rounded-full"></div>
             </div>
           </div>
@@ -82,25 +82,25 @@ export const Services: React.FC = () => {
                 <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500" />
                 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-primary" />
+                  <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-7 h-7 text-primary" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-heading mb-4 group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-bold text-heading mb-5 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
 
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {service.items.slice(0, 4).map((item, i) => (
-                      <li key={i} className="flex items-center text-sm text-secondary/80">
-                        <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
+                      <li key={i} className="flex items-center text-base font-medium text-secondary/80">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3 shrink-0" />
                         {item}
                       </li>
                     ))}
                     {service.items.length > 4 && (
-                      <li className="text-primary text-sm font-medium pt-2 flex items-center">
+                      <li className="text-primary text-base font-bold pt-2 flex items-center">
                         And {service.items.length - 4} more
-                        <ChevronRight className="w-4 h-4 ml-1" />
+                        <ChevronRight className="w-5 h-5 ml-1" />
                       </li>
                     )}
                   </ul>

@@ -48,28 +48,28 @@ export const WhyUs: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-16">
           <div className="lg:w-1/3">
             <Reveal>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-5xl md:text-6xl font-bold mb-6">
                 Why <br /><span className="text-primary">MainteX?</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              <p className="text-gray-300 text-xl leading-relaxed mb-8">
                 We bridge the gap between cost-efficiency and premium engineering. 
                 Our nearshore model is designed for CTOs who demand excellence and speed.
               </p>
             </Reveal>
           </div>
 
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-10">
             {features.map((feature, idx) => (
               <Reveal key={idx} delay={idx * 0.1} direction="left">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center shrink-0">
-                    <feature.icon className="w-6 h-6 text-primary" />
+                <div className="flex gap-5">
+                  <div className="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center shrink-0">
+                    <feature.icon className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
+                    <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+                    <p className="text-gray-400 text-base leading-relaxed">{feature.desc}</p>
                   </div>
                 </div>
               </Reveal>

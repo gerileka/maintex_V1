@@ -20,20 +20,20 @@ export const Header: React.FC = () => {
     <>
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+          isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <div className="w-40">
+          <div className="flex-shrink-0">
             <Logo />
           </div>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-10">
             {['Services', 'Why MainteX', 'Process', 'Case Studies'].map((item) => (
               <a 
                 key={item} 
                 href="#" 
-                className="text-heading font-medium hover:text-primary transition-colors text-sm"
+                className="text-heading font-bold hover:text-primary transition-colors text-lg"
               >
                 {item}
               </a>
@@ -41,14 +41,14 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="hidden lg:block">
-            <Button size="sm">Get a Proposal</Button>
+            <Button size="md">Get a Proposal</Button>
           </div>
 
           <button 
             className="lg:hidden text-heading"
             onClick={() => setIsMobileMenuOpen(true)}
           >
-            <Menu size={28} />
+            <Menu size={32} />
           </button>
         </div>
       </header>
@@ -67,7 +67,7 @@ export const Header: React.FC = () => {
             >
               <X size={32} />
             </button>
-            <nav className="flex flex-col items-center gap-8 text-xl font-bold text-heading">
+            <nav className="flex flex-col items-center gap-8 text-2xl font-bold text-heading">
               {['Services', 'Why MainteX', 'Process', 'Case Studies'].map((item) => (
                 <a 
                   key={item} 
@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
                   {item}
                 </a>
               ))}
-              <Button className="mt-8" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button className="mt-8" size="lg" onClick={() => setIsMobileMenuOpen(false)}>
                 Get a Proposal
               </Button>
             </nav>

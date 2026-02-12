@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
@@ -21,7 +21,7 @@
               dark: '#032019',
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['"Darker Grotesque"', 'sans-serif'],
             },
             animation: {
               'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
@@ -37,10 +37,14 @@
       }
     </script>
     <style>
+      html {
+        font-size: 18px; /* Compensate for Darker Grotesque being small */
+      }
       body {
         background-color: #F7F9FA;
         color: #2E2E2E;
         overflow-x: hidden;
+        letter-spacing: 0.01em; /* Slight spacing for better readability */
       }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
@@ -64,13 +68,16 @@
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "react/": "https://esm.sh/react@^19.2.4/",
     "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
     "recharts": "https://esm.sh/recharts@^3.7.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.34.0"
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
