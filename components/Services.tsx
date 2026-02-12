@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Code2, Database, BarChart3, Cloud, ChevronRight } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { ServiceItem } from '../types';
@@ -55,8 +55,6 @@ const services: ServiceItem[] = [
 ];
 
 export const Services: React.FC = () => {
-  const [activeIdx, setActiveIdx] = useState<number | null>(null);
-
   return (
     <section className="py-24 bg-white relative">
       <div className="container mx-auto px-6">
@@ -76,8 +74,6 @@ export const Services: React.FC = () => {
             <Reveal key={idx} delay={idx * 0.1}>
               <motion.div 
                 className="h-full bg-[#F7F9FA] rounded-2xl p-8 cursor-pointer group hover:shadow-xl transition-all duration-500 border border-transparent hover:border-primary/10 relative overflow-hidden"
-                onMouseEnter={() => setActiveIdx(idx)}
-                onMouseLeave={() => setActiveIdx(null)}
               >
                 <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500" />
                 

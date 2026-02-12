@@ -45,7 +45,7 @@ export const CostAdvantage: React.FC = () => {
                     <YAxis hide />
                     <Tooltip cursor={{fill: 'transparent'}} />
                     <Bar dataKey="cost" radius={[10, 10, 0, 0]} barSize={60}>
-                      {data.map((entry, index) => (
+                      {data.map((_, index) => (
                         <Cell key={`cell-${index}`} fill={index === 0 ? '#E2E8F0' : '#4CC3D2'} />
                       ))}
                     </Bar>
